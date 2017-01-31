@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawyerLayout"
+    tools:context="com.example.android.vip_care.MainActivity">
+
+<RelativeLayout
+
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#BDBDBD"
+    android:paddingBottom="16dp">
+
+    <include layout="@layout/navigation_action"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/include" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="115dp"
+            android:src="@drawable/phone1"
+            android:onClick="call"   />
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/map3"
+            android:onClick="open_map"/>
+
+        <ImageView
+            android:layout_height="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/message1"
+            android:onClick="send_message"
+            android:id="@+id/btnSendSms"/>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/round_button"
+        android:gravity="center"
+        android:text="SOS"
+        android:textColor="#fff"
+        android:onClick="animation_active"
+        android:id="@+id/animated_button"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Press For Help"
+        android:textAllCaps="true"
+        android:padding="15dp"
+        android:textSize="24sp"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/animated_button"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Information"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/include"
+        android:layout_toStartOf="@+id/animated_button"
+        android:layout_marginTop="55dp"
+        android:id="@+id/information"
+        android:layout_toLeftOf="@+id/animated_button"
+        android:onClick="openInformation"/>
+
+    <Button
+        android:text="Report"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/information"
+        android:layout_toRightOf="@+id/animated_button"
+        android:layout_toEndOf="@+id/animated_button"
+        android:layout_marginLeft="33dp"
+        android:layout_marginStart="33dp"
+        android:id="@+id/report"
+        android:onClick="openReportCalander"/>
+
+
+</RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        app:menu="@menu/navigation_menu"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/navigation_header">
+
+    </android.support.design.widget.NavigationView>
+
+
+</android.support.v4.widget.DrawerLayout>

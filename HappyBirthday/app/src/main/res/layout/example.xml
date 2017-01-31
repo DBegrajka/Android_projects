@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.deepak.happybirthday.MainActivity"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/androidparty_image_view"
+        android:src="@drawable/androidparty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/happybirthday_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Happy Birthday Aastha Bapna!"
+        android:textSize="24sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"/>
+
+    <TextView
+        android:id="@+id/from_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From, Deepak Begrajka!"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingRight="20dp"/>
+
+
+</RelativeLayout>
